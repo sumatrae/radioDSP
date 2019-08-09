@@ -5,8 +5,8 @@ It's based on scientic computing library such as numpy, scipy and matplotlib.
 
 You can use it easily plot spectrum or timedomian.Like this:
 
-import pandas as pd
-from radioDSP import RadioSignal
+import pandas as pd  
+from radioDSP import RadioSignal  
 
 i_raw = pd.read_csv('data/i.txt', sep=" ", header=None)
 q_raw = pd.read_csv('data/q.txt', sep=" ", header=None)
