@@ -9,4 +9,4 @@ q = q_raw.iloc[:, 0]
 
 signal = RadioSignal(bit_width = 16, fs = 491.2, i = i, q = q)
 signal.make_wave()
-signal.plot_wave()
+signal.plot_spectrogram()
