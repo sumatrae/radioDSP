@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 
 
 class RadioSignal():
+
+
     def __init__(self, bit_width, fs, i = None, q = None):
         '''
         :param bit_width: iq valid bit width
@@ -15,7 +17,9 @@ class RadioSignal():
         self.i = i
         self.q = q
 
-    def reload(self,i,q):
+        self.reload = self.load
+
+    def load(self,i,q):
         '''
         reload IQ data
         :param i:
@@ -114,7 +118,7 @@ class RadioSignal():
         :return:
         '''
         plt.figure(figsize=(6, 5))
-        plt.plot(self.fft_freq, self.iq_fft_db)
+        plt.plot(self.fft_freq,self.iq_fft_db)
         plt.xlabel('Frequency [MHz]')
         plt.ylabel('Power(dB)')
         plt.show()
